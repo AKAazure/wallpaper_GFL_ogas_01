@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <link
+    rel="stylesheet"
+    href="/css/style.css"/>
+</head>
+<body>
+    <div id="wholeImg">
+        <img id="ogas_top" src="/asset/ogas_azure_top.png"></img>
+        <img id="ogas_left" src="/asset/ogas_azure_left.png"></img>
+        <img id="ogas_right" src="/asset/ogas_azure_right.png"></img>
+        <img id="ogas_bottom" src="/asset/ogas_azure_bottom.png"></img>
+        <img id="ogas_center" src="/asset/ogas_center.png"></img>
+    </div>
+    <script type="text/javascript">
+        const WHOLE_OGAS_WIDTH=300;
+        const OGAS_MARGIN=40;
+        const OGAS_CENTER_WIDTH=124;
+        const OGAS_AZURE_WIDTH=104;
+        const OGAS_AZURE_HEIGHT=51;
+        deploy_img();
+        window.onresize=deploy_img;
+        function deploy_img(){
+            ogas_center.style.left=calc_w(OGAS_CENTER_WIDTH)+"px";
+            ogas_center.style.top=calc_h(OGAS_CENTER_WIDTH)+"px";
+            ogas_top.style.left=ogas_bottom.style.left=calc_w(OGAS_AZURE_WIDTH)+"px";
+            ogas_top.style.top=calc_h(WHOLE_OGAS_WIDTH-OGAS_MARGIN)+"px";
+            ogas_left.style.left=calc_w(WHOLE_OGAS_WIDTH-OGAS_MARGIN)+"px";
+            ogas_left.style.top=ogas_right.style.top=calc_h(OGAS_AZURE_WIDTH)+"px";
+            ogas_right.style.left=calc_w(-(WHOLE_OGAS_WIDTH-OGAS_MARGIN-OGAS_AZURE_HEIGHT*2))+"px";
+            ogas_bottom.style.top=calc_h(-(WHOLE_OGAS_WIDTH-OGAS_MARGIN-OGAS_AZURE_HEIGHT*2))+"px";
+        }
+        function calc_w(w){return window.innerWidth/2-w/2;}
+        function calc_h(h){return window.innerHeight/2-h/2;}
+    </script>
+</body>

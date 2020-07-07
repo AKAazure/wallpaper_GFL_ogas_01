@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+    user-select: none;
+}
+#wholeImg{
+    position: absolute;
+    background-color: black;
+}
+#wholeImg img{
+    position: absolute;
+}
