@@ -18,6 +18,7 @@
         const OGAS_CENTER_WIDTH=124;
         const OGAS_AZURE_WIDTH=104;
         const OGAS_AZURE_HEIGHT=51;
+        const OGAS_BOTTOM_SPECIAL=10;
         deploy_img();
         window.onresize=deploy_img;
         function deploy_img(){
@@ -28,7 +29,7 @@
             ogas_left.style.left=calc_w(WHOLE_OGAS_WIDTH-OGAS_MARGIN)+"px";
             ogas_left.style.top=ogas_right.style.top=calc_h(OGAS_AZURE_WIDTH)+"px";
             ogas_right.style.left=calc_w(-(WHOLE_OGAS_WIDTH-OGAS_MARGIN-OGAS_AZURE_HEIGHT*2))+"px";
-            ogas_bottom.style.top=calc_h(-(WHOLE_OGAS_WIDTH-OGAS_MARGIN-OGAS_AZURE_HEIGHT*2))+"px";
+            ogas_bottom.style.top=calc_h(-(WHOLE_OGAS_WIDTH-OGAS_MARGIN-OGAS_AZURE_HEIGHT*2-OGAS_BOTTOM_SPECIAL))+"px";
         }
         function calc_w(w){return window.innerWidth/2-w/2;}
         function calc_h(h){return window.innerHeight/2-h/2;}
