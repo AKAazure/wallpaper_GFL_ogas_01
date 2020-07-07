@@ -14,6 +14,7 @@
     </div>
     <script type="text/javascript">
         const WHOLE_OGAS_WIDTH=300;
+        const OGAS_HEIGHT_VAL=10;
         const OGAS_MARGIN=40;
         const OGAS_CENTER_WIDTH=124;
         const OGAS_AZURE_WIDTH=104;
@@ -32,6 +33,6 @@
             ogas_bottom.style.top=calc_h(-(WHOLE_OGAS_WIDTH-OGAS_MARGIN-OGAS_AZURE_HEIGHT*2-OGAS_BOTTOM_SPECIAL))+"px";
         }
         function calc_w(w){return window.innerWidth/2-w/2;}
-        function calc_h(h){return window.innerHeight/2-h/2;}
+        function calc_h(h){return window.innerHeight/2-h/2-OGAS_HEIGHT_VAL;}
     </script>
 </body>
